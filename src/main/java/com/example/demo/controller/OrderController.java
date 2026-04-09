@@ -15,7 +15,7 @@ public class OrderController {
 
     @PostMapping("/place/order")
     public String placeOrder(@RequestBody Order order){
-        orderService.processOrder(order);
+        orderService.createOrder(order);
         System.out.println("Order sent successfully");
         return "Order sent successfully";
     }
